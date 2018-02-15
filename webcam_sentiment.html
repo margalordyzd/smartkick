@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kick-Smart - WebCam Sentiment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/favicon.ico">
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+
+
+					<h1 id="logo"><a href="index.html">
+						<img src="images/favicon.ico" alt=""><span style="font-weight:bold">  <b>Kick-Smart</b></span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="image_clf.html">Image Classification</a></li>
+									<li><a href="sentiment.html">News Sentiment Analysis</a></li>
+									<li><a href="webcam_sentiment.html">WebCam Sentiment analysis</a></li>
+									<li><a href="selfdriven_drone.html">Self-Driving Drone</a></li>
+									<li>
+										<a href="trading.html">Trading</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="mailto:maldonadoraulqro@gmail.com" class="button special">Contact us</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Facial Sentiment Analysis</h2>
+							<p>Can we recognize Sentiment from video?</p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<a href="#" class="image fit"><img src="images/faces.png" alt="" /></a>
+								<h3>Domain Background</h3>
+								<p>Detecting a users opinion has always been a relevant area of study due to the feedback that it provides
+								to a given brand or service provider because it can help improve dramatically, after all client
+								satisfaction depends on the client being satisfied. </p>
+								<p>In order to improve the client satisfaction and measuring the impact of a given input in the public, there have been several approaches. One of the most common and used is sentiment analysis via text. With this, you can train a AI model that can tell whether a comment is either positive or negative, which proved to be really useful when analyzing the costumer reviews and user comments in general. There have been several attempt to mimic this analysis in order to determine the sentiment in images, one example is:<br>
+								http://www.ifp.illinois.edu/~jyang29/papers/AAAI15-sentiment.pdf<br>
+								where a set of famous images where used to detect the sentiment that the images depicted. </p>
+
+								<h3>Problem Statement</h3>
+								<p>The problem is simple, given an image, we want to detect which emotion is depicted. More specifically, from a pool of 6 possible emotions, we will choose the most probable one as the emotion being expressed in a picture of a person. This process will later be extrapolated in order to detect emotions live using video from a web cam.</p>
+
+								<h3>Datasets and Inputs</h3>
+								<p>We will use the Cohn-Kanade AU-Coded Expression Database (http://www.pitt.edu/~emotion/ck-spread.htm) which contains a set of images focusing the faces of several people gesturing 6 differentemotions: 0=neutral, 1=anger, 2=contempt, 3=disgust, 4=fear, 5=happy, 6=sadness, 7=surprise.In this dataset, we can observe that each image is labeled, also, the faces are not always facing the camera. Furthermore, there are some cases where the person in the picture is not facing forward but has a slight head rotation.</p>
+
+								<h3>Solution to the problem</h3>
+
+								<p>As it is an image classification problem, We  proposed as a solution, a trained deep convolution neural network to learn from the images to then classify them accordingly. This is an approach that has proven to be a state of the art approach and is the most accurate method of solving image classification problems as shown in: https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf.</p>
+								<p>The paper above is one of the most cited, relevant and influential in the matter where a convnet is exemplified using what is now known as an Alex architecture or AlexNet, which is made of 5 conv layers, max-pooling layers, dropout layers and 3 fully connected layers. A similar architecture was adapted to the problem in hand in order to achieve optimal results.</p>
+								<img src="images/emotions.gif" alt="Flowers in Chania"> 
+
+
+							</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/maldonadoraulqro" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/margalordyzd" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:maldonadoraulqro@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://medium.com/@sergiosantoyo.92" class="icon alt fa-medium"><span class="label">medium</span></a></li>
+						<li><p>maldonadoraulqro@gmail.com</p></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Kick-Smart. All rights reserved.</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
